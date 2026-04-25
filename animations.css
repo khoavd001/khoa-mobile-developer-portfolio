@@ -59,6 +59,35 @@
     animation: node-pulse 2.8s ease-in-out infinite;
   }
 
+  .app-card > img,
+  .store-links a,
+  .nav-links a {
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  }
+
+  .app-card:hover > img {
+    transform: translateY(-4px) rotate(-2deg) scale(1.04);
+  }
+
+  .store-links a:hover,
+  .nav-links a:hover {
+    transform: translateY(-2px);
+  }
+
+  .status-row {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .status-row::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.18), transparent 80%);
+    animation: status-sweep 4.2s ease-in-out infinite;
+    transform: translateX(-120%);
+  }
+
   .contact {
     animation: contact-glow 6s ease-in-out infinite;
   }
@@ -113,6 +142,11 @@
 @keyframes contact-glow {
   0%, 100% { box-shadow: var(--card-shadow); }
   50% { box-shadow: 0 22px 58px rgba(8, 118, 83, 0.14); }
+}
+
+@keyframes status-sweep {
+  0%, 45%, 100% { transform: translateX(-120%); }
+  70% { transform: translateX(120%); }
 }
 
 @media (max-width: 700px), (prefers-reduced-motion: reduce) {
