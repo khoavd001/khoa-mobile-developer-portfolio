@@ -28,7 +28,8 @@
   }
 
   .stats,
-  .app-grid {
+  .app-grid,
+  .domain-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -143,6 +144,7 @@
 
   .stats,
   .app-grid,
+  .domain-grid,
   .skill-columns {
     grid-template-columns: 1fr;
   }
@@ -151,8 +153,14 @@
     grid-template-columns: 1fr;
   }
 
-  .timeline p {
-    grid-column: auto;
+  .experience-head {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .experience-head span {
+    max-width: none;
+    width: fit-content;
   }
 
   .site-footer {
