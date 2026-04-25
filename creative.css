@@ -1,0 +1,389 @@
+body {
+  background:
+    linear-gradient(135deg, rgba(8, 118, 83, 0.08) 0 1px, transparent 1px 36px),
+    linear-gradient(45deg, rgba(31, 95, 191, 0.05) 0 1px, transparent 1px 48px),
+    linear-gradient(180deg, #fbfefd 0%, #eef9f4 46%, #fffdf7 100%);
+}
+
+.site-header {
+  border-bottom-color: rgba(7, 17, 31, 0.12);
+}
+
+.nav-shell {
+  width: min(1180px, calc(100% - 2rem));
+}
+
+.brand-mark {
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+}
+
+.nav-links {
+  box-shadow: 0 12px 30px rgba(7, 17, 31, 0.08);
+}
+
+.section {
+  width: min(1180px, calc(100% - 2rem));
+}
+
+.hero {
+  grid-template-columns: minmax(0, 0.95fr) minmax(390px, 0.85fr);
+  gap: 4rem;
+}
+
+.hero::before {
+  inset: 7% -3% auto 44%;
+  height: 82%;
+  border: 1px solid rgba(8, 118, 83, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(223, 247, 239, 0.2)),
+    repeating-linear-gradient(90deg, transparent 0 21px, rgba(8, 118, 83, 0.08) 22px),
+    repeating-linear-gradient(0deg, transparent 0 21px, rgba(31, 95, 191, 0.055) 22px);
+  clip-path: polygon(9% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%);
+}
+
+.hero::after {
+  content: "BUILD PIPELINE / MOBILE SYSTEMS / STORE RELEASE";
+  position: absolute;
+  right: -7.5rem;
+  top: 48%;
+  color: rgba(7, 17, 31, 0.26);
+  font-size: 0.76rem;
+  font-weight: 900;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+
+.hero-content {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--green), var(--blue), var(--gold));
+}
+
+h1 {
+  max-width: 820px;
+  text-wrap: balance;
+}
+
+.hero-badges span {
+  box-shadow: inset 0 -2px 0 rgba(8, 118, 83, 0.12);
+}
+
+.hero-badges span:nth-child(2) {
+  border-color: rgba(31, 95, 191, 0.25);
+}
+
+.hero-badges span:nth-child(3) {
+  border-color: rgba(201, 138, 18, 0.28);
+}
+
+.hero-visual {
+  isolation: isolate;
+  perspective: 900px;
+}
+
+.hero-visual::before,
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border: 1px solid rgba(7, 17, 31, 0.12);
+  pointer-events: none;
+}
+
+.hero-visual::before {
+  inset: 3.5rem 1rem 5.5rem 5rem;
+  background:
+    linear-gradient(135deg, rgba(7, 17, 31, 0.04), rgba(8, 118, 83, 0.1)),
+    repeating-linear-gradient(45deg, transparent 0 10px, rgba(7, 17, 31, 0.045) 11px);
+  clip-path: polygon(0 0, 88% 0, 100% 18%, 100% 100%, 12% 100%, 0 82%);
+}
+
+.hero-visual::after {
+  width: 220px;
+  height: 150px;
+  right: 0.2rem;
+  top: 0.35rem;
+  background:
+    linear-gradient(90deg, rgba(31, 95, 191, 0.13), transparent),
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(31, 95, 191, 0.12) 14px);
+  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+}
+
+.phone-frame-main,
+.phone-frame-side {
+  z-index: 1;
+}
+
+.phone-frame-main {
+  right: 5.4rem;
+  top: 1.2rem;
+  transform: rotate(-2.5deg) translateZ(20px);
+}
+
+.phone-frame-main::before {
+  content: "LIVE BUILD";
+  display: block;
+  width: fit-content;
+  margin: 0 0 0.75rem auto;
+  border-radius: 999px;
+  background: #07111f;
+  color: #ffffff;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.phone-frame-side {
+  right: 0.5rem;
+  bottom: 2.2rem;
+  transform: rotate(8deg) translateZ(40px);
+}
+
+.metric-grid span {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: 104px;
+  padding: 0.72rem;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.metric-grid span::before {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.metric-grid span::after {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.metric-grid span:nth-child(1)::before {
+  content: "Architecture";
+}
+
+.metric-grid span:nth-child(1)::after {
+  content: "Clean";
+}
+
+.metric-grid span:nth-child(2)::before {
+  content: "Backend";
+}
+
+.metric-grid span:nth-child(2)::after {
+  content: "Firebase";
+}
+
+.metric-grid span:nth-child(3)::before {
+  content: "Hardware";
+}
+
+.metric-grid span:nth-child(3)::after {
+  content: "BLE/MQTT";
+}
+
+.metric-grid span:nth-child(4)::before {
+  content: "Release";
+}
+
+.metric-grid span:nth-child(4)::after {
+  content: "Store";
+}
+
+.status-row {
+  margin-top: 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: #07111f;
+  color: #ffffff;
+  padding: 0.78rem;
+}
+
+.status-row span,
+.status-row strong {
+  color: #ffffff;
+}
+
+.stats {
+  margin-top: -2rem;
+}
+
+.stat-item {
+  transform: skewX(-2deg);
+}
+
+.stat-item > * {
+  display: block;
+  transform: skewX(2deg);
+}
+
+.app-card {
+  min-height: 320px;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+.app-card::after {
+  content: "published";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.domain-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.domain-card {
+  min-height: 230px;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 250, 0.9)),
+    repeating-linear-gradient(135deg, transparent 0 13px, rgba(8, 118, 83, 0.04) 14px);
+}
+
+.domain-card span {
+  margin: 0 0 0.9rem;
+}
+
+.domain-card p {
+  font-size: 0.88rem;
+}
+
+.timeline article {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+.skill-block {
+  min-height: 170px;
+}
+
+.contact {
+  position: relative;
+  border: 1px solid rgba(213, 227, 223, 0.9);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(223, 247, 239, 0.68)),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(8, 118, 83, 0.06) 40px);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .phone-frame-main {
+    animation: cockpit-float 6s ease-in-out infinite;
+  }
+
+  .phone-frame-side {
+    animation: cockpit-float-side 7s ease-in-out infinite;
+  }
+}
+
+@keyframes cockpit-float {
+  0%,
+  100% {
+    transform: rotate(-2.5deg) translate3d(0, 0, 20px);
+  }
+  50% {
+    transform: rotate(-1deg) translate3d(0, -10px, 20px);
+  }
+}
+
+@keyframes cockpit-float-side {
+  0%,
+  100% {
+    transform: rotate(8deg) translate3d(0, 0, 40px);
+  }
+  50% {
+    transform: rotate(6deg) translate3d(0, 8px, 40px);
+  }
+}
+
+@media (max-width: 980px) {
+  .domain-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .domain-card {
+    min-height: 210px;
+  }
+}
+@media (max-width: 700px) {
+  .hero::before,
+  .hero::after,
+  .hero-visual::before,
+  .hero-visual::after {
+    display: none;
+  }
+
+  .hero { grid-template-columns: 1fr; }
+
+  .hero-content { padding-left: 0; }
+
+  .hero-content::before { display: none; }
+
+  .phone-frame-main,
+  .phone-frame-side {
+    transform: none;
+    animation: none;
+  }
+
+  .phone-frame-main::before {
+    display: none;
+  }
+
+  .stats {
+    margin-top: 0;
+  }
+
+  .stat-item,
+  .stat-item > * {
+    transform: none;
+  }
+
+  .app-card,
+  .timeline article {
+    clip-path: none;
+  }
+
+  .domain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-card,
+  .domain-card p {
+    min-height: auto;
+  }
+
+  .contact {
+    padding: 4rem 1rem;
+  }
+}
