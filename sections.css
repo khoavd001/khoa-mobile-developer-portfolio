@@ -13,10 +13,21 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
+  box-shadow: var(--card-shadow);
 }
 
 .stat-item {
+  position: relative;
   padding: 1.2rem;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--green);
 }
 
 .stat-item strong {
@@ -31,11 +42,24 @@
   max-width: none;
   padding-left: max(1rem, calc((100vw - 1120px) / 2));
   padding-right: max(1rem, calc((100vw - 1120px) / 2));
-  background: var(--band);
+  background:
+    linear-gradient(180deg, rgba(234, 246, 241, 0.92), rgba(247, 251, 250, 0.96)),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(8, 118, 83, 0.05) 48px);
 }
 
 .section-heading {
+  position: relative;
   margin-bottom: 2rem;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
 }
 
 .section-heading.compact {
@@ -55,6 +79,12 @@
   gap: 1.1rem;
   padding: 1.25rem;
   overflow: hidden;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(11, 28, 45, 0.12);
 }
 
 .app-card::before {
@@ -76,6 +106,7 @@
 .app-card > img {
   width: 74px;
   height: 74px;
+  box-shadow: 0 14px 28px rgba(11, 28, 45, 0.12);
 }
 
 .tag-list {
@@ -87,7 +118,7 @@
 
 .tag-list span {
   border-radius: 999px;
-  background: #eef2f7;
+  background: #eef6f4;
   color: #334155;
   padding: 0.28rem 0.65rem;
   font-size: 0.84rem;
@@ -101,8 +132,16 @@
 }
 
 .domain-card {
+  position: relative;
   min-height: 190px;
   padding: 1.1rem;
+  overflow: hidden;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.domain-card:hover {
+  border-color: rgba(8, 118, 83, 0.42);
+  transform: translateY(-3px);
 }
 
 .domain-card span {
@@ -113,9 +152,28 @@
   height: 34px;
   margin-bottom: 1rem;
   border-radius: 8px;
-  background: #eef8f4;
+  background: var(--aqua);
   color: var(--green);
   font-weight: 900;
+}
+
+.domain-card:nth-child(2n) span {
+  background: #eaf1ff;
+  color: var(--blue);
+}
+
+.domain-card:nth-child(3n) span {
+  background: #fff6df;
+  color: var(--gold);
+}
+
+.domain-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 1rem 0;
+  height: 3px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, var(--green), transparent);
 }
 
 .domain-card p {
@@ -124,20 +182,46 @@
 }
 
 .timeline {
+  position: relative;
   display: grid;
   gap: 1rem;
 }
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 95px;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--green), rgba(31, 95, 191, 0.3));
+}
+
 .timeline article {
+  position: relative;
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr);
   gap: 1.25rem;
   padding: 1.35rem;
 }
 
+.timeline article::before {
+  content: "";
+  position: absolute;
+  left: 88px;
+  top: 1.55rem;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 1px rgba(8, 118, 83, 0.25);
+}
+
 .timeline time {
   color: var(--green);
   font-weight: 900;
+  font-size: 0.92rem;
 }
 
 .experience-head {
@@ -156,7 +240,7 @@
   flex: 0 0 auto;
   max-width: 240px;
   border-radius: 999px;
-  background: #eef2f7;
+  background: #eef6f4;
   color: #334155;
   padding: 0.3rem 0.7rem;
   font-size: 0.84rem;
@@ -191,7 +275,17 @@
 }
 
 .skill-block {
+  position: relative;
   padding: 1.25rem;
+  overflow: hidden;
+}
+
+.skill-block::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
 }
 
 .contact {
@@ -199,6 +293,10 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 2rem;
+}
+
+.contact h2 {
+  max-width: 680px;
 }
 
 .contact-actions {
