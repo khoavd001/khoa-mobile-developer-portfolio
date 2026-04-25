@@ -1,0 +1,125 @@
+@media (prefers-reduced-motion: no-preference) {
+  .brand-mark::before {
+    content: "";
+    position: absolute;
+    inset: -45%;
+    background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.32), transparent 65%);
+    animation: scan-light 4.8s ease-in-out infinite;
+  }
+
+  .hero::before {
+    animation: grid-drift 14s linear infinite;
+    background-size: auto, 44px 44px, 44px 44px;
+  }
+
+  .hero-content > * {
+    animation: rise-in 720ms both;
+  }
+
+  .hero-content > :nth-child(2) { animation-delay: 80ms; }
+  .hero-content > :nth-child(3) { animation-delay: 150ms; }
+  .hero-content > :nth-child(4) { animation-delay: 220ms; }
+  .hero-content > :nth-child(5) { animation-delay: 290ms; }
+
+  .hero-badges span,
+  .tag-list span,
+  .experience-head span {
+    animation: chip-pulse 5.5s ease-in-out infinite;
+  }
+
+  .metric-grid span::after {
+    animation: metric-pop 3.6s ease-in-out infinite;
+  }
+
+  .metric-grid span:nth-child(2)::after { animation-delay: 260ms; }
+  .metric-grid span:nth-child(3)::after { animation-delay: 520ms; }
+  .metric-grid span:nth-child(4)::after { animation-delay: 780ms; }
+
+  .app-card,
+  .domain-card,
+  .timeline article,
+  .skill-block {
+    animation: card-reveal both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+
+  .app-card::before,
+  .skill-block::before,
+  .section-heading::after {
+    animation: rail-scan 3.8s ease-in-out infinite;
+    background-size: 220% 100%;
+  }
+
+  .domain-card::after {
+    animation: domain-signal 4.8s ease-in-out infinite;
+  }
+
+  .timeline article::before {
+    animation: node-pulse 2.8s ease-in-out infinite;
+  }
+
+  .contact {
+    animation: contact-glow 6s ease-in-out infinite;
+  }
+}
+
+@keyframes scan-light {
+  0%, 55%, 100% { transform: translateX(-45%) rotate(18deg); opacity: 0; }
+  70% { opacity: 1; }
+  86% { transform: translateX(55%) rotate(18deg); opacity: 0; }
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 0 0, 44px 0, 0 44px; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes chip-pulse {
+  0%, 100% { box-shadow: inset 0 -2px 0 rgba(8, 118, 83, 0.12); }
+  50% { box-shadow: inset 0 -2px 0 rgba(31, 95, 191, 0.22), 0 8px 20px rgba(8, 118, 83, 0.1); }
+}
+
+@keyframes metric-pop {
+  0%, 100% { transform: translateY(0); opacity: 0.88; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+
+@keyframes card-reveal {
+  from { filter: saturate(0.92) brightness(0.98); }
+  to { filter: saturate(1) brightness(1); }
+}
+
+@keyframes rail-scan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes domain-signal {
+  0%, 100% { transform: scaleX(0.36); opacity: 0.45; transform-origin: left; }
+  50% { transform: scaleX(1); opacity: 1; transform-origin: left; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(8, 118, 83, 0.25), 0 0 0 0 rgba(8, 118, 83, 0.18); }
+  50% { box-shadow: 0 0 0 1px rgba(8, 118, 83, 0.25), 0 0 0 8px rgba(8, 118, 83, 0); }
+}
+
+@keyframes contact-glow {
+  0%, 100% { box-shadow: var(--card-shadow); }
+  50% { box-shadow: 0 22px 58px rgba(8, 118, 83, 0.14); }
+}
+
+@media (max-width: 700px), (prefers-reduced-motion: reduce) {
+  .app-card,
+  .domain-card,
+  .timeline article,
+  .skill-block {
+    animation-timeline: auto;
+  }
+}
