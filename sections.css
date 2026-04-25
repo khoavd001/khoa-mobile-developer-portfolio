@@ -1,0 +1,161 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-top: 0;
+}
+
+.stat-item,
+.app-card,
+.timeline article,
+.skill-block {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.stat-item {
+  padding: 1.2rem;
+}
+
+.stat-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.section-band {
+  width: 100%;
+  max-width: none;
+  padding-left: max(1rem, calc((100vw - 1120px) / 2));
+  padding-right: max(1rem, calc((100vw - 1120px) / 2));
+  background: var(--band);
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading.compact {
+  max-width: 780px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.app-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.1rem;
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: var(--green);
+}
+
+.app-card.accent-blue::before {
+  background: var(--blue);
+}
+
+.app-card.accent-red::before {
+  background: var(--red);
+}
+
+.app-card > img {
+  width: 74px;
+  height: 74px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.tag-list span {
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #334155;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline article {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.timeline time {
+  color: var(--green);
+  font-weight: 900;
+}
+
+.timeline p {
+  grid-column: 2;
+}
+
+.timeline p,
+.skill-block p,
+.app-card p {
+  margin-bottom: 0;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.skill-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-block {
+  padding: 1.25rem;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-actions {
+  max-width: 360px;
+  justify-content: flex-end;
+}
+
+.site-footer {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+}

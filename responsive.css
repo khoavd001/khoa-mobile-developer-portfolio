@@ -1,0 +1,161 @@
+@media (max-width: 980px) {
+  .hero,
+  .split-layout,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero-visual {
+    min-height: 520px;
+  }
+
+  .phone-frame-main {
+    left: 8%;
+    right: auto;
+  }
+
+  .phone-frame-side {
+    right: 8%;
+  }
+
+  .stats,
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-shell {
+    align-items: center;
+    min-height: 64px;
+    padding: 0.55rem 0;
+  }
+
+  .brand span:not(.brand-mark) {
+    display: none;
+  }
+
+  .nav-links {
+    flex: 1;
+    justify-content: flex-end;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-links a {
+    min-height: 38px;
+    padding: 0 0.55rem;
+    font-size: 0.88rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .hero {
+    gap: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .hero-actions,
+  .button {
+    width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 0;
+  }
+
+  .phone-frame {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .phone-frame-main {
+    position: static;
+    min-height: 0;
+    padding: 0.75rem;
+  }
+
+  .phone-frame-side {
+    display: none;
+  }
+
+  .phone-top,
+  .metric-grid,
+  .status-row {
+    display: none;
+  }
+
+  .app-stack {
+    grid-template-columns: 48px 1fr;
+    gap: 0.6rem;
+    padding: 0.7rem;
+  }
+
+  .app-stack img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .metric-grid {
+    gap: 0.55rem;
+    margin: 0.75rem 0;
+  }
+
+  .metric-grid span {
+    min-height: 52px;
+  }
+
+  .phone-frame-side p,
+  .status-row {
+    font-size: 0.78rem;
+  }
+
+  .stats,
+  .app-grid,
+  .skill-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline article {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline p {
+    grid-column: auto;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
