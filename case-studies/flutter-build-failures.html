@@ -42,7 +42,7 @@
       <section class="section">
         <div class="section-heading compact">
           <p class="eyebrow">Flutter debugging case study</p>
-          <h1>Build failures I can debug in production Flutter apps</h1>
+          <h1>Production Flutter bugs and release blockers I can debug</h1>
           <p>
             I handle Flutter bugs that cross into native Android, Kotlin, Gradle, Firebase, signing,
             and Play Console release work. The goal is not just to patch the error message, but to
@@ -78,9 +78,52 @@
           </article>
         </div>
 
+        <div class="section-heading compact">
+          <p class="eyebrow">Debugging process</p>
+          <h2>How I narrow down Flutter production blockers</h2>
+          <p>
+            A useful fix starts with the first failing log, the recent environment change, and a
+            repeatable verification path. That keeps the work focused on the blocker instead of
+            turning a release issue into a broad rewrite.
+          </p>
+        </div>
+
+        <div class="domain-grid" aria-label="Debugging process">
+          <article class="domain-card">
+            <span>01</span>
+            <h3>Collect the failing signal</h3>
+            <p>Error log, Flutter version, target platform, build command, screenshots, and the last dependency/tooling change before the failure.</p>
+          </article>
+          <article class="domain-card">
+            <span>02</span>
+            <h3>Reproduce and isolate</h3>
+            <p>Confirm whether the failure belongs to Dart code, native Android/iOS setup, Gradle/Kotlin tooling, Firebase, or store release config.</p>
+          </article>
+          <article class="domain-card">
+            <span>03</span>
+            <h3>Patch the smallest safe layer</h3>
+            <p>Fix the blocker inside the existing architecture, avoiding unrelated rewrites and dependency churn.</p>
+          </article>
+          <article class="domain-card">
+            <span>04</span>
+            <h3>Verify the release path</h3>
+            <p>Document what changed, how it was tested, and what command or store check confirms the app is unblocked.</p>
+          </article>
+        </div>
+
+        <div class="section-heading compact">
+          <p class="eyebrow">What to send</p>
+          <h2>Useful inputs for a fast Fiverr scope</h2>
+          <p>
+            Send the exact error log, reproduction steps, Flutter version, target platform, recent
+            changes, and store rejection text if there is one. For Android/Kotlin/Gradle blockers,
+            include the first failing build output rather than only the final summary line.
+          </p>
+        </div>
+
         <div class="hero-actions" aria-label="Service links">
           <a class="button primary" href="https://www.fiverr.com/khoavu2k1/fix-flutter-app-bugs-for-ios-and-android" target="_blank" rel="noopener noreferrer">View Fiverr gig</a>
-          <a class="button secondary" href="../index.html#contact">Contact directly</a>
+          <a class="button secondary" href="../index.html#apps">View mobile portfolio</a>
         </div>
       </section>
     </main>
