@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Flutter production debugging notes for Android Kotlin, Gradle, build, crash, and app release blockers."
+    >
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://is1-ssl.mzstatic.com https://play-lh.googleusercontent.com; style-src 'self'; base-uri 'self'; form-action 'none';"
+    >
+    <title>Flutter Build Failure Debugging - Vu Dinh Khoa</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sections.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="../creative.css?v=20260426c">
+    <link rel="stylesheet" href="../adaptive.css?v=20260426c">
+    <link rel="stylesheet" href="../animations.css?v=20260426c">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="../index.html#top" aria-label="Vu Dinh Khoa home">
+          <span class="brand-mark" aria-hidden="true">VK</span>
+          <span>Vu Dinh Khoa</span>
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Flutter debugging case study</p>
+          <h1>Build failures I can debug in production Flutter apps</h1>
+          <p>
+            I handle Flutter bugs that cross into native Android, Kotlin, Gradle, Firebase, signing,
+            and Play Console release work. The goal is not just to patch the error message, but to
+            find the real compatibility issue and leave a clear verification path.
+          </p>
+        </div>
+
+        <div class="domain-grid" aria-label="Flutter debugging coverage">
+          <article class="domain-card">
+            <span>01</span>
+            <h3>Gradle and Kotlin upgrades</h3>
+            <p>Plugin version mismatches, JVM target errors, namespace migration, compileSdk, and Android Gradle Plugin issues.</p>
+          </article>
+          <article class="domain-card">
+            <span>02</span>
+            <h3>Android native integration</h3>
+            <p>Kotlin code, AndroidManifest changes, platform channels, Firebase setup, permissions, and native crash paths.</p>
+          </article>
+          <article class="domain-card">
+            <span>03</span>
+            <h3>Release blockers</h3>
+            <p>AAB/APK signing, keystore issues, Play Console rejections, App Store/TestFlight checks, and CI/CD build failures.</p>
+          </article>
+          <article class="domain-card">
+            <span>04</span>
+            <h3>Runtime crashes</h3>
+            <p>Crash logs, device-specific behavior, API/state bugs, performance regressions, and UI errors across screen sizes.</p>
+          </article>
+          <article class="domain-card">
+            <span>05</span>
+            <h3>Handover quality</h3>
+            <p>Root-cause notes, code changes matched to the existing architecture, test notes, and reproduction/verification steps.</p>
+          </article>
+        </div>
+
+        <div class="hero-actions" aria-label="Service links">
+          <a class="button primary" href="https://www.fiverr.com/khoavu2k1/fix-flutter-app-bugs-for-ios-and-android" target="_blank" rel="noopener noreferrer">View Fiverr gig</a>
+          <a class="button secondary" href="../index.html#contact">Contact directly</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Vu Dinh Khoa</span>
+      <span>Flutter, Kotlin/Gradle, Android, iOS release debugging</span>
+    </footer>
+  </body>
+</html>
